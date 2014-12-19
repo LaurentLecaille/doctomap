@@ -1,0 +1,26 @@
+= @erreur
+.container
+  .row
+    .col-md-3
+    .col-md-6
+      -if params[:erreur]
+        .alert.alert-error
+          = "Erreur avec"
+          %b
+            = params[:erreur].join(", ")
+
+      
+      = form_for :docteur, :url => {:controller => "docteur", :action => "create"} do |f|
+        %form{:role => "form"}
+          .form-group
+            %label{:for => "prenom"} Prénom
+            =f.text_field :prenom, {:class => "form-control", :placeholder => "Prénom", :type => "prenom"}
+          .form-group
+            %label{:for => "nom"} Nom
+            =f.text_field :nom, {:class => "form-control", :placeholder => "Nom", :type => "nom"}
+          .form-group
+            %label{:for => "adresse"} Adresse
+            =f.text_field :adresse, {:class => "form-control", :placeholder => "Adresse", :type => "adresse"}
+          .form-group
+            =f.select :specialite, options_for_select(@all_specialite)
+          =f.submit

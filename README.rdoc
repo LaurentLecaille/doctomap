@@ -1,0 +1,13 @@
+* Ruby version
+ruby-2.1.0
+
+* Database creation
+Postgresql (For Heroku)
+
+* Gems
+Geocoder
+Bootstrap 
+Gmaps4rails
+
+* Liste des spécialités
+http://fr.wikipedia.org/wiki/Spécialités_médicales#Sp.C3.A9cialit.C3.A9s_en_m.C3.A9decine_en_France

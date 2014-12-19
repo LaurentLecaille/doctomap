@@ -1,0 +1,12 @@
+= link_to "Ajouter un professionnel de santé", new_docteur_path
+%dl
+- @docteurs.each do |docteur|
+	%dt
+		%b
+			= "#{docteur.prenom} #{docteur.nom}"
+	%dd
+		%p
+			= docteur.specialite
+		%i
+			= docteur.adresse
+	%br
